@@ -70,7 +70,7 @@ function RUN_FUNCTION(name, extension, configOpt)
         Loader.Name = "Loader"
         Loader.Parent = BlueXLoader
         Loader.AnchorPoint = Vector2.new(0.5, 0.5)
-        Loader.BackgroundColor3 = Color3.fromRGB(255, 231, 35)
+        Loader.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
         Loader.BorderColor3 = Color3.fromRGB(120, 255, 0)
         Loader.BorderSizePixel = 2
         Loader.Position = UDim2.new(0.5, 0, 0.5, 0)
@@ -118,7 +118,7 @@ function RUN_FUNCTION(name, extension, configOpt)
 
         Bar.Name = "Bar"
         Bar.Parent = LoadBar
-        Bar.BackgroundColor3 = Color3.fromRGB(255, 231, 35)
+        Bar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
         Bar.BorderSizePixel = 0
         Bar.Size = UDim2.new(0, 0, 1, 0)
         Bar.ZIndex = 4
@@ -126,6 +126,13 @@ function RUN_FUNCTION(name, extension, configOpt)
 
         UICorner_4.CornerRadius = UDim.new(0, 4)
         UICorner_4.Parent = Bar
+
+local LocalizationService = game:GetService("LocalizationService")
+local player = game.Players.LocalPlayer
+ 
+local result, code = pcall(function()
+    return LocalizationService:GetCountryRegionForPlayerAsync(player)
+end)   
 
         Message.Name = "Message"
         Message.Parent = Menu
@@ -190,11 +197,11 @@ function RUN_FUNCTION(name, extension, configOpt)
         setSize(20)
         
         for i = 1, 3 do 
-            Message.Text = "Checking ."
+            Message.Text = "Getting Data"
             wait(.4)
-            Message.Text = "Checking . ."
+            Message.Text = "Hello " ..game.Players.LocalPlayer.DisplayName.. " From: ".. code
             wait(.4)
-            Message.Text = "Checking . . ."
+            Message.Text = "Checking Game.."
             wait(.4)
         end
         setSize(60)

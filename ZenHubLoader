@@ -189,14 +189,12 @@ function RUN_FUNCTION(name, extension, configOpt)
         wait(2)
         setSize(20)
         
-        for i = 1, 4 do 
-            Message.Text = "Getting Data"
+        for i = 1, 3 do 
+            Message.Text = "Loading Menu.."
             wait(.4)
-            Message.Text = "Loading Menu"
+            Message.Text = "Anti afk Enable!"
             wait(.4)
-            Message.Text = "Anti Afk Enable"
-            wait(.4)
-            Message.Text = "Checking . . ."
+            Message.Text = "Checking. . ."
             wait(.4)
         end
         setSize(60)

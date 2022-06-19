@@ -71,7 +71,7 @@ function RUN_FUNCTION(name, extension, configOpt)
         Loader.Parent = BlueXLoader
         Loader.AnchorPoint = Vector2.new(0.5, 0.5)
         Loader.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        Loader.BorderColor3 = Color3.fromRGB(120, 255, 0)
+        Loader.BorderColor3 = Color3.fromRGB(255, 255, 255)
         Loader.BorderSizePixel = 2
         Loader.Position = UDim2.new(0.5, 0, 0.5, 0)
         Loader.Size = UDim2.new(0, 0,  0, 0)
@@ -99,7 +99,7 @@ function RUN_FUNCTION(name, extension, configOpt)
         Title.Size = UDim2.new(1, -6, -0.262604743, 55)
         Title.ZIndex = 4
         Title.Font = Enum.Font.SourceSansBold
-        Title.Text = name or "JioaHub | Loader"
+        Title.Text = name or "Z HUB | Loader"
         Title.TextColor3 = Color3.fromRGB(197, 197, 197)
         Title.TextSize = 22.000
         Title.TextTransparency = 1
@@ -118,7 +118,7 @@ function RUN_FUNCTION(name, extension, configOpt)
 
         Bar.Name = "Bar"
         Bar.Parent = LoadBar
-        Bar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+        Bar.BackgroundColor3 = Color3.fromRGB(120, 255, 0)
         Bar.BorderSizePixel = 0
         Bar.Size = UDim2.new(0, 0, 1, 0)
         Bar.ZIndex = 4
@@ -186,7 +186,7 @@ function RUN_FUNCTION(name, extension, configOpt)
             })
         end
         
-        wait(2)
+        wait(1)
         setSize(20)
         
         for i = 1, 3 do 

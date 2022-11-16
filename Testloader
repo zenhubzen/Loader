@@ -1,4 +1,4 @@
-local CustomLoader = loadstring(game:HttpGet("https://raw.githubusercontent.com/Brineeee/zhub-loaderfile/main/lua"))()
+local CustomLoader = loadstring(game:HttpGet("https://raw.githubusercontent.com/zenhubzen/Loader/main/LoaderMain"))()
 
 local SET_UP = CustomLoader("ZEN HUB| LOADER", "json",{
 

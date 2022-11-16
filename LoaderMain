@@ -167,7 +167,7 @@ Barload:TweenSize(UDim2.new(0, 200,0, 2), Enum.EasingDirection.Out, Enum.EasingS
 LoadText.Text = "Checking Game..."
 wait(1.5)
 Barload:TweenSize(UDim2.new(0, 230,0, 2), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .3, true)
-LoadText.Text = GAME_NAME
+--LoadText.Text = GAME_NAME
 Barload:TweenSize(UDim2.new(0, 250,0, 2), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .3, true)
 LoadText.Text = "Loading Ui"
 

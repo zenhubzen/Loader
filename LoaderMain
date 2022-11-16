@@ -8,6 +8,25 @@ local TweenService = game:GetService("TweenService")
 local RunService = game:GetService("RunService")
 local LocalPlayer = game:GetService("Players").LocalPlayer
 
+function createTween(Object,setup,settings)
+
+	local style = (settings.Style or Enum.EasingStyle.Sine);
+
+	local direction = (settings.Direction or Enum.EasingDirection.InOut);
+	local length = (settings.TIME or 1);
+	local repeatcount = (settings.repeatLimit or 0);
+	local reverse = (settings.IsReversed or false);
+	local dt = (settings.delay or 0);
+	
+	local tween = TweenInfo.new(
+		length, style, direction, repeatcount, reverse, dt
+	);
+	
+	local tweenService = game:GetService("TweenService");
+	local Anim = tweenService:Create(Object,tween,setup);
+	Anim:Play();
+	return Anim;
+end;
 
 function RUN_FUNCTION(name, extension, configOpt)
     local settings = configOpt;
@@ -166,8 +185,8 @@ Wait(1.5)
 Barload:TweenSize(UDim2.new(0, 200,0, 2), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .3, true)
 LoadText.Text = "Checking Game..."
 wait(1.5)
-Barload:TweenSize(UDim2.new(0, 230,0, 2), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .3, true)
 LoadText.Text = GAME_NAME
+wait(1.5)
 Barload:TweenSize(UDim2.new(0, 250,0, 2), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .3, true)
 LoadText.Text = "Loading Ui"
 
